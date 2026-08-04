@@ -431,16 +431,9 @@ a { color: inherit; }
 .contact-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 26px;
-  font-family: var(--font-mono);
-  font-size: 0.95rem;
+  align-items: center;
+  gap: 14px;
 }
-.contact-links a {
-  text-decoration: none;
-  color: var(--text-dim);
-  border-bottom: 1px solid transparent;
-}
-.contact-links a:hover { color: var(--text); border-bottom-color: var(--border); }
 
 /* ---------- footer ---------- */
 .footer {
