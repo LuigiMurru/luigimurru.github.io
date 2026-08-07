@@ -343,6 +343,8 @@ a { color: inherit; }
 
 @media (max-width: 640px) { .cert-grid { grid-template-columns: 1fr; } }
 
+.cert-grid-single { grid-template-columns: minmax(0, 360px); }
+
 /* ---------- projects ---------- */
 .project-grid {
   display: grid;
