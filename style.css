@@ -14,8 +14,8 @@
   
   /* Testi chiari */
   --text: #e2e2e2;
-  --text-dim: #909294;
-  --text-faint: #555759;
+  --text-dim: #a7a9ac;
+  --text-faint: #83868a;
   --accent: #8fa3b3;   /* muted slate-blue */
 
   --font-body: "Inter", -apple-system, BlinkMacSystemFont, sans-serif;
@@ -122,9 +122,43 @@ a { color: inherit; }
   flex-direction: column;
   justify-content: center;
   padding: 120px var(--edge) 70px;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse 60% 55% at 82% 18%, rgba(143, 163, 179, 0.16), transparent 62%),
+    radial-gradient(circle at 12% 85%, rgba(143, 163, 179, 0.10), transparent 55%);
 }
 
-.hero-inner { max-width: 720px; }
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(226, 226, 226, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(226, 226, 226, 0.05) 1px, transparent 1px);
+  background-size: 46px 46px;
+  -webkit-mask-image: radial-gradient(ellipse 70% 65% at 62% 30%, black 35%, transparent 78%);
+  mask-image: radial-gradient(ellipse 70% 65% at 62% 30%, black 35%, transparent 78%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  top: -10%;
+  right: -6%;
+  width: 46vw;
+  height: 46vw;
+  max-width: 560px;
+  max-height: 560px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(143, 163, 179, 0.22) 0%, rgba(143, 163, 179, 0.06) 45%, transparent 72%);
+  filter: blur(2px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.hero-inner { position: relative; z-index: 1; max-width: 720px; }
 
 .coord {
   font-family: var(--font-mono);
