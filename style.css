@@ -359,6 +359,18 @@ a { color: inherit; }
   display: flex;
   flex-direction: column;
 }
+
+.project-media {
+  margin: -28px -28px 20px;
+  border-bottom: 1px solid var(--border);
+  overflow: hidden;
+  background: var(--bg-elev);
+}
+.project-media img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
 .project-head {
   display: flex;
   justify-content: space-between;
