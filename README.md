@@ -15,6 +15,7 @@ Sito personale statico (HTML/CSS/JS puro, nessun build tool) — percorso, proge
    index.html
    style.css
    script.js
+   CV.pdf
    ```
    Da terminale, dentro questa cartella:
    ```bash
